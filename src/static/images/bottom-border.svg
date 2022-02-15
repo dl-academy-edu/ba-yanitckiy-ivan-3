@@ -1,0 +1,6 @@
+<svg width="478" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<line x1="0" x2="413" y1="0" y2="0" stroke="black" stroke-width="5"/>
+	<line x1="412" x2="433" y1="0" y2="19" stroke="black" stroke-width="2.5" stroke-linejoin="miter"/>
+	<line x1="433" x2="454" y1="19" y2="0" stroke="black" stroke-width="2.5" stroke-linejoin="miter"/>
+	<line x1="453" x2="478" y1="0" y2="0" stroke="black" stroke-width="5"/>
+</svg>
