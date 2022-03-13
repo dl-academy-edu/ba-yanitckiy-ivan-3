@@ -12,30 +12,14 @@
 </head>
 
 <body>
-	<div class="container ">
-		<header class="header">
-			<span class="header__item header__item_active header__item_h">Home</span>
-			<div>
-				<a href="#" class="header__item">My blog</a>
-				<button type="button" class="header__item sign-in-button">Sign in</button>
-				<button type="button" class="header__item register-button">Register</butt>
-			</div>
-		</header>
-	</div>
-	<div class="menu-wrapper menu-wrapper_close">
-		<div class="menu-wrapper__close">
-			<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707" />
-				<rect x="0.543945" y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0.543945 22.6289)" fill="#070707" />
-			</svg>
-		</div>
-		<div class="menu-wrapper__links">
-			<a href="#" class="menu-wrapper__link">Home</a>
-			<a href="#" class="menu-wrapper__link">My blog</a>
-			<button type="button" class="menu-wrapper__link sign-in-button">Sign in</button>
-			<button type="button" class="menu-wrapper__link register-button">Register</button>
-		</div>
-	</div>
+	@@include("header/index.html",{
+	"profile-first": "header__item_active",
+	"profile-second": "",
+	"profile-third": "",
+	"menu-first": "menu-wrapper__link_active",
+	"menu-second": "",
+	"menu-third": ""
+	})
 	<main>
 		<section class="main-portfolio">
 			<div class="container">
@@ -44,7 +28,7 @@
 						<h1 class="main-portfolio__title">Antonina <br /> Antoninovna</h1>
 						<div class="main-portfolio__bottom-text">
 							<p class="main-portfolio__description">Future front-end developer 23 years old, Tolyatti</p>
-							<button class="main-portfolio__button">
+							<button class="main-portfolio__button open-menu-wrapper">
 								<svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707" />
 									<rect y="8.00006" width="32" height="4" rx="2" fill="#070707" />
@@ -56,9 +40,27 @@
 					<div class="slider">
 						<div class="slider__wrapper">
 							<div class="slider__inner-wrapper">
-								<div class="slider__slide"></div>
-								<div class="slider__slide"></div>
-								<div class="slider__slide"></div>
+								<div class="slider__slide">
+									<picture>
+										<source srcset="/static/images/main-image_s.png" media="(max-width: 620px)">
+										<source srcset="/static/images/main-image_m.png" media="(max-width: 900px)">
+										<img src="/static/images/main-image.png" alt="main portfolio image">
+									</picture>
+								</div>
+								<div class="slider__slide">
+									<picture>
+										<source srcset="/static/images/main-image_s.png" media="(max-width: 620px)">
+										<source srcset="/static/images/main-image_m.png" media="(max-width: 900px)">
+										<img src="/static/images/main-image.png" alt="main portfolio image">
+									</picture>
+								</div>
+								<div class="slider__slide">
+									<picture>
+										<source srcset="/static/images/main-image_s.png" media="(max-width: 620px)">
+										<source srcset="/static/images/main-image_m.png" media="(max-width: 900px)">
+										<img src="/static/images/main-image.png" alt="main portfolio image">
+									</picture>
+								</div>
 							</div>
 						</div>
 						<div class="slider__control">
@@ -189,21 +191,33 @@
 					<div class="portfolio__slider swiper">
 						<div class="portfolio__wrapper swiper-wrapper">
 							<div class="portfolio__slide swiper-slide">
-								<!-- <img class="portfolio__img" src="/static/images/swiper-img.png" alt=""> -->
+								<picture>
+									<source srcset="/static/images/portfolio-image_s.png" media="(max-width: 620px)">
+									<source srcset="/static/images/portfolio-image_m.png" media="(max-width: 900px)">
+									<img src="/static/images/portfolio-image.png" alt="main portfolio image">
+								</picture>
 								<div class="portfolio__table">
 									<a href="#" class="portfolio__link">Learning site for DL Academy courses</a>
 									<p class="portfolio__text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
 								</div>
 							</div>
 							<div class="portfolio__slide swiper-slide">
-								<!-- <img class="portfolio__img" src="/static/images/swiper-img.png" alt=""> -->
+								<picture>
+									<source srcset="/static/images/portfolio-image_s.png" media="(max-width: 620px)">
+									<source srcset="/static/images/portfolio-image_m.png" media="(max-width: 900px)">
+									<img src="/static/images/portfolio-image.png" alt="main portfolio image">
+								</picture>
 								<div class="portfolio__table">
 									<a href="#" class="portfolio__link">Learning site for DL Academy courses</a>
 									<p class="portfolio__text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
 								</div>
 							</div>
 							<div class="portfolio__slide swiper-slide">
-								<!-- <img class="portfolio__img" src="/static/images/swiper-img.png" alt=""> -->
+								<picture>
+									<source srcset="/static/images/portfolio-image_s.png" media="(max-width: 620px)">
+									<source srcset="/static/images/portfolio-image_m.png" media="(max-width: 900px)">
+									<img src="/static/images/portfolio-image.png" alt="main portfolio image">
+								</picture>
 								<div class="portfolio__table">
 									<a href="#" class="portfolio__link">Learning site for DL Academy courses</a>
 									<p class="portfolio__text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
@@ -219,7 +233,7 @@
 	</main>
 	@@include('footer/index.html')
 	<section class="form form_close sign-in">
-		<form action="#" class="form__main">
+		<form action="#" name="sign-in" class="form__main form__main_small">
 			<button type="button" class="form__close sign-in__close-button">
 				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282" />
@@ -228,17 +242,17 @@
 			</button>
 			<div class="form__item">
 				<label class="form__label" for="sign-in__email">Email</label>
-				<input class="form__input form__input_required" type="text" id="sign-in__email">
+				<input class="form__input form__input_required" name="email" type="text" id="sign-in__email">
 			</div>
 			<div class="form__item">
 				<label class="form__label" for="sign-in__password">Password</label>
-				<input class="form__input form__input_required" type="password" id="sign-in__password">
+				<input class="form__input form__input_required" name="password" type="password" id="sign-in__password">
 			</div>
 			<button class="form__submit sign-in__submit forms form__submit_active">Log in</button>
 		</form>
 	</section>
 	<section class="form form_close register">
-		<form action="#" class="form__main">
+		<form action="#" name="register" class="form__main">
 			<button type="button" class="form__close register__close-button">
 				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282" />
@@ -252,17 +266,17 @@
 			<div class="form__line">
 				<div class="form__item">
 					<label class="form__label" for="register__name">Name</label>
-					<input class="form__input form__input_required" type="text" id="register__name">
+					<input class="form__input form__input_required" name="name" type="text" id="register__name">
 				</div>
 				<div class="form__item">
 					<label class="form__label" for="register__surname">Surname</label>
-					<input class="form__input form__input_required" type="text" id="register__surname">
+					<input class="form__input form__input_required" name="surname" type="text" id="register__surname">
 				</div>
 			</div>
 			<div class="form__line">
 				<div class="form__item">
 					<label class="form__label" for="register__password">Password</label>
-					<input class="form__input form__input_required" type="password" id="register__password">
+					<input class="form__input form__input_required" name="password" type="password" id="register__password">
 				</div>
 				<div class="form__item">
 					<label class="form__label" for="register__repeat-pass">Repeat password</label>
@@ -272,53 +286,16 @@
 			<div class="form__line">
 				<div class="form__item">
 					<label class="form__label" for="register__location">Location</label>
-					<input class="form__input form__input_required" type="text" id="register__location">
+					<input class="form__input form__input_required" name="location" type="text" id="register__location">
 				</div>
 				<div class="form__item">
 					<label class="form__label" for="register__age">Age</label>
-					<input class="form__input form__input_required" type="text" id="register__age">
+					<input class="form__input form__input_required" name="age" type="text" id="register__age">
 				</div>
 			</div>
 			<input class="form__checkbox" type="checkbox" id="register__confirm">
 			<label class="form__checkbox-label register__check-label" for="register__confirm">Clicking on the button, you consent to the processing of your personal data.</label>
 			<button class="form__submit register__submit form__submit_dis" disabled>Sign up</button>
-		</form>
-	</section>
-	<section class="form form_close send-message">
-		<form action="#" class="form__main">
-			<button type="button" class="form__close send-message__close-button">
-				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282" />
-					<rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282" />
-				</svg>
-			</button>
-			<div class="form__line">
-				<div class="form__item">
-					<label class="form__label" for="send-message__name">What is your name?</label>
-					<input class="form__input form__input_required" type="text" id="send-message__name">
-				</div>
-				<div class="form__item">
-					<label class="form__label" for="send-message__subject">Message subject</label>
-					<input class="form__input form__input_required" type="text" id="send-message__subject">
-				</div>
-			</div>
-			<div class="form__line">
-				<div class="form__item">
-					<label class="form__label" for="send-message__email">Your Email</label>
-					<input class="form__input form__input_required" type="text" id="send-message__email">
-				</div>
-				<div class="form__item">
-					<label class="form__label" for="send-message__phone">Your mobile phone</label>
-					<input class="form__input form__input_required" type="text" id="send-message__phone">
-				</div>
-			</div>
-			<div class="form__item form__item_all">
-				<label class="form__label form__label_optional" for="send-message__textarea">What do you want to discuss with me?</label>
-				<textarea class="form__input form__input_optional" id="send-message__textarea"></textarea>
-			</div>
-			<input class="form__checkbox" type="checkbox" id="send-message__confirm">
-			<label class="form__checkbox-label send-message__check-label" for="send-message__confirm">Clicking on the button, you consent to the processing of your personal data.</label>
-			<button class="form__submit send-message__submit form__submit_dis" disabled>Send</button>
 		</form>
 	</section>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

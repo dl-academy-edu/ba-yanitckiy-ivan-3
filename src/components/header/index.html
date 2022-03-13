@@ -1,9 +1,27 @@
-<div class="container">
+<div class="container ">
 	<header class="header">
-		<a href="#" class="header__item header__item_h">Home</a>
+		<a href="/" class="header__item @@profile-first header__item_h">Home</a>
 		<div>
-			<a href="#" class="header__item">My blog</a>
-			<a href="#" class="header__item">My profile</a>
+			<a href="/pages/blog/index.html" class="header__item  @@profile-second">My blog</a>
+			<a href="/pages/profile/index.html" class="header__item  @@profile-third header__item_hide profile-link">My profile</a>
+			<button type="button" class="header__item sign-in-button">Sign in</button>
+			<button type="button" class="header__item register-button">Register</butt>
 		</div>
 	</header>
+</div>
+
+<div class="menu-wrapper menu-wrapper_close">
+	<div class="menu-wrapper__close">
+		<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707" />
+			<rect x="0.543945" y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0.543945 22.6289)" fill="#070707" />
+		</svg>
+	</div>
+	<div class="menu-wrapper__links">
+		<a href="/" class="menu-wrapper__link @@menu-first">Home</a>
+		<a href="/pages/blog/index.html" class="menu-wrapper__link @@menu-second">My blog</a>
+		<a href="/pages/profile/index.html" class="menu-wrapper__link  @@menu-third menu-wrapper__link_hide menu-link">My profile</a>
+		<button type="button" class="menu-wrapper__link sign-in-button">Sign in</button>
+		<button type="button" class="menu-wrapper__link register-button">Register</button>
+	</div>
 </div>

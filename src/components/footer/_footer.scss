@@ -1,9 +1,12 @@
 .footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 60px 0;
+	background: #F6F6F6;
+	&__wrapper{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 60px 0;
+	}
 	&__title {
 		font-weight: bold;
 		font-size: 34px;

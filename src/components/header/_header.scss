@@ -3,6 +3,7 @@
   align-items: center;
 	justify-content: space-between;
 	padding: 33px 0;
+	// margin: 0 0 40px 0;
 	border-bottom: 1px solid #828282;
 	&__item {
 		color: #828282;
@@ -24,6 +25,9 @@
 		}
 		&_active{
 			color: #070707;
+		}
+		&_hide{
+			display: none;
 		}
 	}
 	span{
@@ -56,9 +60,20 @@
 		font-weight: bold;
 		color: #828282;
 		margin: 0 0 40px 0;
+		&_active{
+			color: #070707;
+		}
+		&_hide{
+			display: none;
+		}
+	}
+	&_close{
+		display: none;
 	}
 }
 
-.menu-wrapper_close{
-	display: none;
+@media(max-width: 620px){
+	.header{
+		display: none;
+	}
 }
