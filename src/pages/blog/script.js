@@ -49,7 +49,7 @@ const sendStandartRequest = () => {
 	}
 
 	if (localStorage.getItem("tags") != undefined) {
-		for (tag of localStorage.getItem("tags")) {
+		for (let tag of localStorage.getItem("tags")) {
 			if (tag != ",") {
 				document.querySelector(`#form-settings__tags_${tag}`).checked = true
 			}
@@ -92,7 +92,7 @@ const sendStandartRequest = () => {
 		params = `${params}&tags=[${tags}]`
 	}
 
-	for (elem in filter) {
+	for (let elem in filter) {
 		filterText = `${filterText}"${elem}":${filter[elem]},`
 	}
 
@@ -114,7 +114,7 @@ const sendStandartRequest = () => {
 		})
 		.then(({ data }) => {
 			if (blogContainer.querySelector(".blog")) {
-				for (item of blogContainer.querySelectorAll(".blog")) {
+				for (let item of blogContainer.querySelectorAll(".blog")) {
 					item.remove()
 				}
 			}
@@ -428,7 +428,7 @@ filtersForm.addEventListener("submit", (e) => {
 		localStorage.setItem("tags", tags.toString())
 	}
 
-	for (elem in filter) {
+	for (let elem in filter) {
 		if (elem == "title") {
 			filterText = `${filterText}"${elem}":"${filter[elem]}",`
 		} else {
@@ -453,7 +453,7 @@ filtersForm.addEventListener("submit", (e) => {
 		})
 		.then(({ data }) => {
 			if (blogContainer.querySelector(".blog")) {
-				for (item of blogContainer.querySelectorAll(".blog")) {
+				for (let item of blogContainer.querySelectorAll(".blog")) {
 					item.remove()
 				}
 			}
@@ -504,7 +504,7 @@ resetButton.addEventListener("click", () => {
 		})
 		.then(({ data }) => {
 			if (blogContainer.querySelector(".blog")) {
-				for (item of blogContainer.querySelectorAll(".blog")) {
+				for (let item of blogContainer.querySelectorAll(".blog")) {
 					item.remove()
 				}
 			}
