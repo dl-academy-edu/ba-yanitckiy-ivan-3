@@ -130,7 +130,8 @@ const sendStandartRequest = () => {
 const addBlog = (data) => {
 	let tags = ``
 
-	for (tag of data.tags) {
+
+	for (let tag of data.tags) {
 		tags = `${tags}
 		<div class="blog__tag blog__tag_${tag.tag.id}"></div>`
 	}

@@ -333,27 +333,19 @@ for (let section of formSections) {
 							localStorage.setItem("userId", `${data.userId}`)
 							changeHeaderMenu()
 							break
-						// case "register":
-						// localStorage.setItem("token", `${data.token}`)
-						// localStorage.setItem("userId", `${data.userId}`)
-						// changeHeaderMenu()
-						// break
 						default:
 							console.log("OK")
 					}
 					for (let item of form.querySelectorAll(".form__item")) {
 						addText("All right", item, "ok")
 						item.querySelector("input").classList.add("form__input_ok")
-						// input.classList.add
 					}
 					submit.classList.add("form__submit_ok")
 					setTimeout(() => {
 						section.classList.add("form_close")
 						for (let item of form.querySelectorAll(".form__item")) {
-							// addText("All right", item, "ok")
 							item.querySelector(".form__ok").remove()
 							item.querySelector("input").classList.remove("form__input_ok")
-							// input.classList.add
 						}
 						submit.classList.remove("form__submit_ok")
 						body.style.overflow = "auto"
