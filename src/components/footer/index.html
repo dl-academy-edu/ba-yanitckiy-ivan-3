@@ -1,0 +1,60 @@
+<footer class="footer">
+	<div class="container">
+		<div class="footer__wrapper">
+			<h2 class="footer__title">Contacts</h2>
+			<p class="footer__text">Want to know more or just chat? You are welcome!</p>
+			<button type="button" class="footer__button">Send message</button>
+			<div class="footer__line">
+				<a href="#" class="footer__link button">Instagram</a>
+				<a href="#" class="footer__link button">Vk</a>
+				<a href="#" class="footer__link button">Telegram</a>
+				<a href="#" class="footer__link button">Mail</a>
+				<a href="#" class="footer__link button">GitHub</a>
+				<a href="#" class="footer__link button">Phone</a>
+			</div>
+			<div class="footer__design-text">
+				<p class="footer__design">Design by</p>
+				<a href="#" class="footer__design footer__design_decor">DL Academy</a>
+			</div>
+			<p class="footer__design">Program code from Antonina</p>
+		</div>
+	</div>
+</footer>
+
+<section class="form form_close send-message">
+	<form action="#" name="send-message" class="form__main">
+		<button type="button" class="form__close send-message__close-button">
+			<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282" />
+				<rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282" />
+			</svg>
+		</button>
+		<div class="form__line">
+			<div class="form__item">
+				<label class="form__label" for="send-message__name">What is your name?</label>
+				<input class="form__input form__input_required" type="text" id="send-message__name">
+			</div>
+			<div class="form__item">
+				<label class="form__label" for="send-message__subject">Message subject</label>
+				<input class="form__input form__input_required" type="text" id="send-message__subject">
+			</div>
+		</div>
+		<div class="form__line">
+			<div class="form__item">
+				<label class="form__label" for="send-message__email">Your Email</label>
+				<input class="form__input form__input_required" type="text" id="send-message__email">
+			</div>
+			<div class="form__item">
+				<label class="form__label" for="send-message__phone">Your mobile phone</label>
+				<input class="form__input form__input_required" type="text" id="send-message__phone">
+			</div>
+		</div>
+		<div class="form__item form__item_all">
+			<label class="form__label form__label_optional" for="send-message__textarea">What do you want to discuss with me?</label>
+			<textarea class="form__input form__input_optional" id="send-message__textarea"></textarea>
+		</div>
+		<input class="form__checkbox" type="checkbox" id="send-message__confirm">
+		<label class="form__checkbox-label send-message__check-label" for="send-message__confirm">Clicking on the button, you consent to the processing of your personal data.</label>
+		<button class="form__submit send-message__submit form__submit_dis" disabled>Send</button>
+	</form>
+</section>

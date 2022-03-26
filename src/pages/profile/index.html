@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8" />
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+	<link href="/common.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<title>Профиль</title>
+</head>
+
+<body>
+	@@include("header/index.html",{
+	"profile-first": "",
+	"profile-second": "",
+	"profile-third": "header__item_active",
+	"menu-first": "",
+	"menu-second": "",
+	"menu-third": "menu-wrapper__link_active"
+	})
+	<main>
+		<div class="container">
+			<section class="profile">
+				<div class="profile__text">
+					<h1 class="profile__title">My profile</h1>
+					<button class="profile__button open-menu-wrapper">
+						<svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707" />
+							<rect y="8.00006" width="32" height="4" rx="2" fill="#070707" />
+							<rect y="16.0001" width="32" height="4" rx="2" fill="#070707" />
+						</svg>
+					</button>
+				</div>
+				<div class="profile__content">
+					<!-- <div class="profile__photo"> -->
+					<img class="profile__photo" src="/static/images/empty-photo.svg" alt="">
+					<!-- <svg class="profile__empty-img" width="121" height="145" viewBox="0 0 121 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M59.1732 69.3794C68.7047 69.3794 76.9582 65.9609 83.7018 59.2161C90.4455 52.4725 93.864 44.2212 93.864 34.6886C93.864 25.1594 90.4455 16.907 83.7008 10.1611C76.956 3.41853 68.7036 0 59.1732 0C49.6407 0 41.3894 3.41853 34.6457 10.1622C27.9021 16.9059 24.4824 25.1583 24.4824 34.6886C24.4824 44.2212 27.9021 52.4736 34.6468 59.2172C41.3916 65.9598 49.644 69.3794 59.1732 69.3794V69.3794Z" fill="#070707" />
+							<path d="M119.873 110.751C119.678 107.945 119.285 104.883 118.706 101.651C118.121 98.3936 117.369 95.3146 116.468 92.5004C115.537 89.5917 114.271 86.7193 112.706 83.9667C111.082 81.1097 109.174 78.6219 107.034 76.5747C104.795 74.433 102.055 72.7111 98.8859 71.4552C95.7278 70.2058 92.2279 69.5728 88.4841 69.5728C87.0138 69.5728 85.5919 70.1761 82.8459 71.9639C81.1559 73.0661 79.179 74.3407 76.9725 75.7506C75.0858 76.9527 72.5299 78.079 69.3728 79.0988C66.2928 80.0954 63.1654 80.6009 60.0787 80.6009C56.9921 80.6009 53.8658 80.0954 50.7824 79.0988C47.6287 78.0801 45.0728 76.9538 43.1883 75.7517C41.0026 74.355 39.0247 73.0804 37.3094 71.9628C34.5666 70.175 33.1436 69.5717 31.6734 69.5717C27.9285 69.5717 24.4297 70.2058 21.2727 71.4563C18.1058 72.71 15.3642 74.4319 13.1236 76.5758C10.9841 78.6241 9.07543 81.1108 7.45353 83.9667C5.88986 86.7193 4.62398 89.5906 3.69215 92.5015C2.79219 95.3157 2.03947 98.3936 1.45488 101.651C0.875786 104.879 0.482397 107.941 0.2879 110.755C0.0966991 113.51 0 116.371 0 119.26C0 126.778 2.39001 132.865 7.10299 137.353C11.7577 141.783 17.9168 144.03 25.4066 144.03H94.7575C102.247 144.03 108.404 141.784 113.06 137.353C117.774 132.868 120.164 126.78 120.164 119.259C120.163 116.357 120.065 113.494 119.873 110.751V110.751Z" fill="#070707" />
+						</svg> -->
+					<!-- </div> -->
+					<div class="profile__info">
+						<div class="profile__line">
+							<div class="profile__label">Name:</div>
+							<div class="profile__data profile__password" name="name">Oksana</div>
+						</div>
+						<div class="profile__line">
+							<div class="profile__label">Surname:</div>
+							<div class="profile__data profile__password" name="surname">Larioshkina</div>
+						</div>
+						<div class="profile__line">
+							<div class="profile__label">Email:</div>
+							<div class="profile__data profile__password" name="email">larioshkina@gmail.com</div>
+						</div>
+						<div class="profile__line">
+							<div class="profile__label">Password:</div>
+							<div class="profile__data profile__password" name="password" type="password">**********</div>
+						</div>
+						<div class="profile__line">
+							<div class="profile__label">Location:</div>
+							<div class="profile__data profile__password" name="location">Tolyatti</div>
+						</div>
+						<div class="profile__line profile__line_last">
+							<div class="profile__label">Age:</div>
+							<div class="profile__data profile__password" name="age">23</div>
+						</div>
+						<button type="button" class="profile__change-pass button">Change password</button>
+						<button type="button" class="profile__change-data button">Change other data</button>
+						<button type="button" class="profile__delete button">Delete account</button>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<section class="form form_close change-password">
+		<form action="#" class="form__main form__main_small">
+			<button type="button" class="form__close send-message__close-button">
+				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282" />
+					<rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282" />
+				</svg>
+			</button>
+			<div class="form__item">
+				<label class="form__label form__input_required" for="send-message__subject">Old password</label>
+				<input class="form__input form__input_required" name="oldPassword" type="password" id="send-message__subject">
+			</div>
+			<div class="form__item">
+				<label class="form__label form__input_required" for="send-message__email">New password</label>
+				<input class="form__input form__input_required" name="newPassword" type="password" id="send-message__email">
+			</div>
+			<div class="form__item">
+				<label class="form__label form__input_required" for="send-message__phone">Repeat new password</label>
+				<input class="form__input form__input_required" name="newPasswordRepeat" type="password" id="send-message__phone">
+			</div>
+			<button class="form__submit form__submit_active change-password__submit">Change password</button>
+		</form>
+	</section>
+	<section class="form form_close change-data">
+		<form action="#" class="form__main form__main_small">
+			<button type="button" class="form__close register__close-button">
+				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282" />
+					<rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282" />
+				</svg>
+			</button>
+			<div class="form__item form__item_all">
+				<label class="form__label form__input_required" for="change-data__email">Email</label>
+				<input class="form__input form__input_required" name="email" type="text" id="change-data__email">
+			</div>
+			<div class="form__line">
+				<div class="form__item">
+					<label class="form__label form__input_required" for="change-data__name">Name</label>
+					<input class="form__input form__input_required" name="name" type="text" id="change-data__name">
+				</div>
+				<div class="form__item">
+					<label class="form__label form__input_required" for="change-data__surname">Surname</label>
+					<input class="form__input form__input_required" name="surname" type="text" id="change-data__surname">
+				</div>
+			</div>
+			<div class="form__line">
+				<div class="form__item">
+					<label class="form__label form__input_required" for="change-data__location">Location</label>
+					<input class="form__input form__input_required" name="location" type="text" id="change-data__location">
+				</div>
+				<div class="form__item">
+					<label class="form__label form__input_required" for="change-data__age">Age</label>
+					<input class="form__input form__input_required" name="age" type="text" id="change-data__age">
+				</div>
+			</div>
+			<div class="form__item form-input">
+				<span class="form__label form__label_optional">Profile picture</span>
+				<div class="form__file-wrapper">
+					<label class="form__file-label" for="change-data__picture">Choose a file...</label>
+					<input class="form__file-input" name="avatar" type="file" id="change-data__picture">
+				</div>
+			</div>
+			<button class="form__submit form__submit_active change-data__submit">Submit changes</button>
+		</form>
+	</section>
+	<script src="script.js"></script>
+</body>
+
+</html>

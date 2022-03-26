@@ -1,0 +1,518 @@
+.settings {
+	padding: 40px 0 20px 0;
+	&__text{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 47px;
+		line-height: 57px;
+		margin: 0 0 40px 0;
+	}
+	&__button{
+		padding: 20px 0 0 0;
+		display: none;
+	}
+}
+.form-settings {
+	&__filters{
+		display: flex;
+		margin: 0 0 35px 0;
+		flex-wrap: wrap;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		margin: 0 0 14px 0;
+	}
+	&__tags {
+		margin: 0 77px 0 0;
+	}
+	&__checkboxs{
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 115px;
+	}
+	&__checkbox-input {
+		display: none;
+	}
+	&__checkbox-label {
+		margin: 0 0 10px 0;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		cursor: pointer;
+		position: relative;
+		&::before{
+			content: "";
+			border: 3px solid #E5E5E5;
+			box-sizing: border-box;
+			border-radius: 5px;
+			width: 25px;
+			height: 25px;
+			display: block;
+			margin: 0 12px 0 0;
+			transition: 0.4s border;
+		}
+		&::after{
+			content: url(/static/images/mark.svg);
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			opacity: 0;
+			transition: 0.4s opacity;
+		}
+		&_notext,
+		&_notext::before{
+			margin: 0;
+		}
+		&_1{
+			margin: 0 5px 5px 0;
+			&::before{
+				border: 3px solid #2176FF;
+			}
+			&::after{
+				content: url(/static/images/mark_1.svg);
+			}
+		}
+		&_2{
+			margin: 0 5px 5px 0;
+			&::before{
+				border: 3px solid #33A1FD;
+			}
+			&::after{
+				content: url(/static/images/mark_2.svg);
+			}
+		}
+		&_3{
+			margin: 0 5px 5px 0;
+			&::before{
+				border: 3px solid #FDCA40;
+			}
+			&::after{
+				content: url(/static/images/mark_3.svg);
+			}
+		}
+		&_4{
+			margin: 0 0px 5px 0;
+			&::before{
+				border: 3px solid #57E2E5;
+			}
+			&::after{
+				content: url(/static/images/mark_4.svg);
+			}
+		}
+		&_5{
+			margin: 0 5px 0px 0;
+			&::before{
+				border: 3px solid #F79824;
+			}
+			&::after{
+				content: url(/static/images/mark_5.svg);
+			}
+		}
+		&_6{
+			margin: 0 5px 0px 0;
+			&::before{
+				border: 3px solid #E08DAC;
+			}
+			&::after{
+				content: url(/static/images/mark_6.svg);
+			}
+		}
+		&_7{
+			margin: 0 5px 0px 0;
+			&::before{
+				border: 3px solid #6A7FDB;
+			}
+			&::after{
+				content: url(/static/images/mark_7.svg);
+			}
+		}
+		&_8{
+			margin: 0;
+			&::before{
+				border: 3px solid #45CB85;
+			}
+			&::after{
+				content: url(/static/images/mark_8.svg);
+			}
+		}
+	}
+	&__views {
+		display: flex;
+		flex-direction: column;
+		margin: 0 60px 0 0;
+	}
+	&__radio-input {
+		display: none;
+	}
+	&__radio-label {
+		margin: 0 0 14px 0;
+		padding: 0 0 0 37px;
+		position: relative;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		cursor: pointer;
+		&:last-child{
+			margin: 0;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			border: 3px solid #E5E5E5;
+			border-radius: 50%;
+			height: 25px;
+			width: 25px;
+			top: -2px;
+			left: 0;
+			transition: 0.4s border;
+		}
+		&::after{
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			background: #E5E5E5;
+			height: 13px;
+			width: 13px;
+			top: 4px;
+			left: 6px;
+			transition: 0.4s background-color;
+		}
+	}
+	&__comments {
+		display: flex;
+		flex-direction: column;
+		margin: 0 50px 0 0;
+
+	}
+	&__show {
+		display: flex;
+		flex-direction: column;
+		margin: 0 76px 0 0;
+	}
+	&__sort {
+		display: flex;
+		flex-direction: column;
+		margin: 0 90px 0 0;
+	}
+	&__button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px 0 0 0;
+	}
+	&__button-text {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #E5E5E5;
+		margin: 0 0 5px 0;
+	}
+	&__text-input {
+		display: flex;
+	}
+	&__title-input {
+		margin: 0 30px 0 0;
+		width: 100%;
+	}
+}
+
+.form-settings__checkbox-input:checked + .form-settings__checkbox-label_def::before{
+	border: 3px solid #070707;
+}
+
+.form-settings__checkbox-input:checked + .form-settings__checkbox-label::after{
+	opacity: 1;
+}
+
+.form-settings__radio-input:checked + .form-settings__radio-label::before{
+	border: 3px solid #070707;
+}
+
+.form-settings__radio-input:checked + .form-settings__radio-label::after{
+	background: #070707;
+}
+
+.blogs {
+	&__posts {
+		margin: 0 0 50px 0;
+	}
+	&__pagination {
+		margin: 0 0 60px 0;
+		display: flex;
+	}
+	&__back {
+		margin: 0 auto 0 0;
+		cursor: pointer;
+	}
+	&__numbers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__num {
+		margin: 0 10px 0 0;
+		a{
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 22px;
+			color: #E5E5E5;
+		}
+		&:last-child{
+			margin: 0;
+		}
+		&_active {
+			a{
+				color: #000000;
+			}
+		}
+	}
+	&__forward {
+		margin: 0 0 0 auto;
+		cursor: pointer;
+	}
+	button[disabled]{
+		cursor: not-allowed;
+		.line{
+			fill: #E5E5E5;
+		}
+		.round{
+			stroke: #E5E5E5;
+		}
+	}
+}
+
+.blogs__back rect,
+.blogs__forward rect{
+	transition: all 0.4s;
+}
+
+.blogs__back:hover .round,
+.blogs__forward:hover .round,
+.blogs__back:focus .round,
+.blogs__forward:focus .round{
+	stroke: #828282;
+}
+
+.blogs__back:hover .line,
+.blogs__forward:hover .line,
+.blogs__back:focus .line,
+.blogs__forward:focus .line{
+	fill: #828282;
+}
+
+.blog {
+	display: flex;
+	margin: 0 0 20px 0;
+	padding: 20px 0 0 0;
+	border-top: #E5E5E5 solid 2px;
+	&__img {
+		height: 236px;
+	}
+	&__content {
+		padding: 20px;
+	}
+	&__tags {
+		display: flex;
+		margin: 0 0 10px 0;
+	}
+	&__tag{
+		width: 30px;
+		height: 10px;
+		border-radius: 5px;
+		margin: 0 5px 0 0;
+		&:last-child{
+			margin: 0;
+		}
+		&_1{
+			background-color: #2176FF;
+		}
+		&_2{
+			background-color: #33A1FD;
+		}
+		&_3{
+			background-color: #FDCA40;
+		}
+		&_4{
+			background-color: #57E2E5;
+		}
+		&_5{
+			background-color: #F79824;
+		}
+		&_6{
+			background-color: #E08DAC;
+		}
+		&_7{
+			background-color: #6A7FDB;
+		}
+		&_8{
+			background-color: #45CB85;
+		}
+	}
+	&__metadata {
+		display: flex;
+		margin: 0 0 15px 0;
+	}
+	&__item {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #828282;
+		margin: 0 10px 0 0;
+		&:last-child{
+			margin: 0;
+		}
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+		margin: 0 0 10px 0;
+	}
+	&__text {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+		margin: 0 0 20px 0;
+	}
+	&__link {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 22px;
+		border-bottom: #070707 dashed 1px;
+		transition: border-bottom 0.4s;
+		&:hover,
+		&:focus{
+			border-bottom: #070707 solid 1px;
+		}
+	}
+}
+
+.blog:last-child{
+	margin: 0;
+}
+
+@media(max-width: 1439px){
+	.form-settings {
+		&__comments {
+			margin: 0 50px 30px 0;
+		}
+	}
+}
+
+@media(max-width: 1200px){
+	.form-settings {
+		&__comments {
+			margin: 0 50px 0px 0;
+		}
+	}
+}
+
+@media(max-width: 1119px){
+	.form-settings {
+		&__comments {
+			margin: 0 50px 30px 0;
+		}
+	}
+}
+
+@media(max-width: 834px){
+	.form-settings {
+		&__tags {
+			margin: 0 50px 0 0;
+		}
+		&__show {
+			margin: 0 0 30px 0;
+		}
+	}
+
+	.blog {
+		&__img {
+			height: initial;
+		}
+	}
+}
+
+@media(max-width: 678px){
+	.form-settings{
+		&__show{
+			margin: 0 50px 0 0;
+		}
+	}
+	.blogs{
+		&__pagination{
+			margin: 0 0 40px 0;
+		}
+	}
+	.blog {
+		flex-direction: column;
+		align-items: center;
+		&__img {
+			height: 280px;
+		}
+		&__content {
+			padding: 20px 0 0 0;
+			max-width: 280px;
+		}
+	}
+}
+
+@media(max-width: 620px){
+	.settings{
+		// padding: 30px 0 40px 0;
+		&__button{
+			display: block;
+		}
+	}
+}
+
+@media(max-width: 574px){
+	.form-settings{
+		&__sort{
+			margin: 0;
+		}
+	}
+}
+
+@media(max-width: 484px){
+	.form-settings{
+		&__comments{
+			margin: 0 45px 25px 0;
+			max-width: 105px;
+		}
+		&__sort{
+			margin: 0 68px 25px 0;
+		}
+		&__tags{
+			margin: 0 34px 0 0;
+		}
+		&__text-input{
+			flex-direction: column;
+		}
+		&__title-input{
+			margin: 0 0 20px 0;
+		}
+		&__submit{
+			align-self: flex-end;
+		}
+	}
+}
+
+@media(max-width: 373px){
+	.form-settings{
+		&__views{
+			margin: 0;
+		}
+		&__show{
+			margin: 0;
+		}
+	}
+}

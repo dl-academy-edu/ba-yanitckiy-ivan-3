@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8" />
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
+	<link href="/common.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+	<title>Блог</title>
+</head>
+
+<body>
+	@@include("header/index.html",{
+	"profile-first": "",
+	"profile-second": "header__item_active",
+	"profile-third": "",
+	"menu-first": "",
+	"menu-second": "menu-wrapper__link_active",
+	"menu-third": ""
+	})
+	<main>
+		<section class="settings">
+			<div class="container">
+				<div class="settings__text">
+					<h1 class="settings__title">My blog</h1>
+					<button class="settings__button open-menu-wrapper">
+						<svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707" />
+							<rect y="8.00006" width="32" height="4" rx="2" fill="#070707" />
+							<rect y="16.0001" width="32" height="4" rx="2" fill="#070707" />
+						</svg>
+					</button>
+				</div>
+				<div class="settings__tags">
+					<form class="form-settings">
+						<div class="form-settings__filters">
+							<div class="form-settings__comments">
+								<h3 class="form-settings__title">Comments</h3>
+
+								<input type="radio" id="form-settings__comments_1" class="form-settings__radio-input" name="commentsCount" value="0">
+								<label for="form-settings__comments_1" class="form-settings__radio-label">not a single </label>
+
+								<input type="radio" id="form-settings__comments_2" class="form-settings__radio-input" name="commentsCount" value='{"$between":[1,50]}'>
+								<label for="form-settings__comments_2" class="form-settings__radio-label">more 1</label>
+
+								<input type="radio" id="form-settings__comments_3" class="form-settings__radio-input" name="commentsCount" value='{"$between":[50,100000]}'>
+								<label for="form-settings__comments_3" class="form-settings__radio-label">more 50</label>
+							</div>
+							<div class="form-settings__views">
+								<h3 class="form-settings__title">Views</h3>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__views_1" name="views" value='{"$between":[100,500]}'>
+								<label class="form-settings__radio-label" for="form-settings__views_1">more 100</label>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__views_2" name="views" value='{"$between":[500,1000]}'>
+								<label class="form-settings__radio-label" for="form-settings__views_2">more 500</label>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__views_3" name="views" value='{"$between":[1000,2000]}'>
+								<label class="form-settings__radio-label" for="form-settings__views_3">more 1000</label>
+							</div>
+							<div class="form-settings__sort">
+								<h3 class="form-settings__title">Sort by</h3>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__sort_1" name="sort" value="date">
+								<label class="form-settings__radio-label" for="form-settings__sort_1">date</label>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__sort_2" name="sort" value="title">
+								<label class="form-settings__radio-label" for="form-settings__sort_2">title</label>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__sort_3" name="sort" value="views">
+								<label class="form-settings__radio-label" for="form-settings__sort_3">views</label>
+							</div>
+							<div class="form-settings__show">
+								<h3 class="form-settings__title">How show?</h3>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__show_1" name="limit" value="5">
+								<label class="form-settings__radio-label" for="form-settings__show_1">show 5</label>
+
+								<input class="form-settings__radio-input" type="radio" id="form-settings__show_2" name="limit" value="10">
+								<label class="form-settings__radio-label" for="form-settings__show_2">show 10</label>
+							</div>
+							<div class="form-settings__tags">
+								<h3 class="form-settings__title">Tags</h3>
+								<div class="form-settings__checkboxs">
+									<input type="checkbox" name="tags" value="1" id="form-settings__tags_1" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_1" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_1"></label>
+
+									<input type="checkbox" name="tags" value="2" id="form-settings__tags_2" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_2" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_2"></label>
+
+									<input type="checkbox" name="tags" value="3" id="form-settings__tags_3" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_3" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_3"></label>
+
+									<input type="checkbox" name="tags" value="4" id="form-settings__tags_4" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_4" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_4"></label>
+
+									<input type="checkbox" name="tags" value="5" id="form-settings__tags_5" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_5" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_5"></label>
+
+									<input type="checkbox" name="tags" value="6" id="form-settings__tags_6" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_6" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_6"></label>
+
+									<input type="checkbox" name="tags" value="7" id="form-settings__tags_7" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_7" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_7"></label>
+
+									<input type="checkbox" name="tags" value="8" id="form-settings__tags_8" class="form-settings__checkbox-input">
+									<label for="form-settings__tags_8" class="form-settings__checkbox-label form-settings__checkbox-label_notext form-settings__checkbox-label_8"></label>
+								</div>
+							</div>
+							<div class="form-settings__button">
+								<div class="form-settings__button-text">reset form</div>
+								<button type="button" class="form-settings__reset button">Reset</button>
+							</div>
+						</div>
+						<div class="form-settings__text-input">
+							<input class="form-settings__title-input form__input" type="text" name="title">
+							<button class="form-settings__submit button">Search</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="blogs">
+			<div class="container">
+				<div class="blogs__posts"></div>
+				<div class="blogs__pagination">
+					<button class="blogs__back" disabled>
+						<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect class="round" x="40.75" y="40.75" width="39.5" height="39.5" rx="19.75" transform="rotate(-180 40.75 40.75)" stroke="#070707" stroke-width="2.5" />
+							<rect class="line" x="24.5791" y="32.6992" width="16.5512" height="3" rx="1.5" transform="rotate(-135 24.5791 32.6992)" fill="#070707" />
+							<rect class="line" x="26.7002" y="11.4199" width="16.5512" height="3" rx="1.5" transform="rotate(135 26.7002 11.4199)" fill="#070707" />
+						</svg>
+					</button>
+					<ul class="blogs__numbers undotted">
+						<li class="blogs__num blogs__num_active">
+							<a href="#">1</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">2</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">3</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">4</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">5</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">6</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">7</a>
+						</li>
+						<li class="blogs__num">
+							<a href="#">8</a>
+						</li>
+					</ul>
+					<button class="blogs__forward">
+						<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect class="round" x="1.25" y="1.25" width="39.5" height="39.5" rx="19.75" stroke="#070707" stroke-width="2.5" />
+							<rect class="line" x="17.4209" y="9.30078" width="16.5512" height="3" rx="1.5" transform="rotate(45 17.4209 9.30078)" fill="#070707" />
+							<rect class="line" x="15.2998" y="30.5801" width="16.5512" height="3" rx="1.5" transform="rotate(-45 15.2998 30.5801)" fill="#070707" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('footer/index.html')
+	<script src="script.js"></script>
+</body>
+
+</html>
